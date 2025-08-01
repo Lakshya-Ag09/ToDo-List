@@ -19,9 +19,10 @@ def get_choice():
 
 def display_tasks(tasks):
   if not tasks:
-    print('No tasks in the list.')
+    print('\nNo tasks in the list.')
     return
   
+  print('\nCurrent Tasks:')
   for index, task in enumerate(tasks, start=1):
     print(f'{index}. {task}')
 
@@ -31,6 +32,7 @@ def add_task(tasks):
     task = input('Enter a new task: ').strip()
     if len(task) != 0:
       tasks.append(task)
+      print(f'Task "{task}" added.')
       break
     else:
       print('Invalid task!')
